@@ -1,4 +1,4 @@
-def test_dummy_file(host):
-    f = host.file("/tmp/dummy")
+def test_systemd_overlay_file(host):
+    f = host.file("/etc/systemd/system/cockpit.socket.d/listen.conf")
     assert f.exists
     assert f.is_file

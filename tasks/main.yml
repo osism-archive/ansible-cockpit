@@ -1,7 +1,12 @@
 ---
-- name: template - create dummy file
-  copy:
-    content: ""
-    dest: /tmp/dummy
-    force: no
-    mode: 0644
+- name: Install required packages (client)
+  package:
+    name: "{{ item }}"
+    state: present
+  become: true
+  when: configure_cockpit|bool
+  with_items: "{{ required_packages_cockpit }}"
+
+- name: Setup cockpit server
+  include: server.yml
+  when: configure_cockpit_server|bool

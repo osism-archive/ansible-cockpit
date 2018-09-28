@@ -1,1 +1,24 @@
 ---
+# client
+
+configure_cockpit: yes
+
+required_packages_cockpit:
+  - cockpit-bridge
+  - cockpit-docker
+  - cockpit-packagekit
+  - cockpit-storaged
+  - cockpit-system
+
+# server
+
+configure_cockpit_server: no
+
+required_packages_cockpit_server:
+  - cockpit
+
+cockpit_groupname: all
+cockpit_host: 127.0.0.1
+cockpit_port: 8130
+cockpit_ssh_port: 22
+cockpit_ssh_interface: ens3
