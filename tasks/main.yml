@@ -1,0 +1,7 @@
+---
+- name: template - create dummy file
+  copy:
+    content: ""
+    dest: /tmp/dummy
+    force: no
+    mode: 0644
