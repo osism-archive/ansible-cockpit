@@ -12,6 +12,9 @@ required_packages_cockpit:
   - cockpit-storaged
   - cockpit-system
 
+cockpit_system_color: yellow
+cockpit_system_visible: "true"
+
 # server
 
 configure_cockpit_server: no
