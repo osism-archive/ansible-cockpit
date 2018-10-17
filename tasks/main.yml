@@ -9,4 +9,6 @@
 
 - name: Setup cockpit server
   include: server.yml
-  when: configure_cockpit_server|bool
+  when:
+    - configure_cockpit_server|bool
+    - cockpit_groupname_server in group_names
