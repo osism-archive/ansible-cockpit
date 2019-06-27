@@ -22,7 +22,8 @@ configure_cockpit_server: no
 cockpit_groupname_server: manager
 
 required_packages_cockpit_server:
-  - cockpit
+  - cockpit-dashboard
+  - cockpit-ws
 
 cockpit_host: 127.0.0.1
 cockpit_port: 8130
