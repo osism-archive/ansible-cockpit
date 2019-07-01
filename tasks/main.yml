@@ -6,9 +6,13 @@
   become: true
   when: configure_cockpit|bool
   with_items: "{{ required_packages_cockpit }}"
+  tags:
+    - client
 
 - name: Setup cockpit server
   include: server.yml
   when:
     - configure_cockpit_server|bool
     - cockpit_groupname_server in group_names
+  tags:
+    - server
