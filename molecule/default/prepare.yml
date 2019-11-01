@@ -2,5 +2,5 @@
 - name: Playbook for role preparations
   hosts: all
 
-  roles: []
-  tasks: []
+  roles:
+    - role: osism.repository
