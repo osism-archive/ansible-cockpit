@@ -10,18 +10,18 @@ cache:
     - $HOME/.cache/pip
 
 before_install:
-  - openssl aes-256-cbc -K $encrypted_5fde982ae229_key -iv $encrypted_5fde982ae229_iv -in molecule/default/clouds.yml.enc -out molecule/default/clouds.yml -d
+  - openssl aes-256-cbc -K $encrypted_16e6e45071a6_key -iv $encrypted_16e6e45071a6_iv -in molecule/default/clouds.yml.enc -out molecule/default/clouds.yml -d
 
 install:
   - pip install -r requirements.txt
 
 env:
-  - TOX_ENV=ansible26-xenial
-  - TOX_ENV=ansible26-bionic
   - TOX_ENV=ansible27-xenial
   - TOX_ENV=ansible27-bionic
   - TOX_ENV=ansible28-xenial
   - TOX_ENV=ansible28-bionic
+  - TOX_ENV=ansible29-xenial
+  - TOX_ENV=ansible29-bionic
 
 script:
   - tox -e $TOX_ENV
