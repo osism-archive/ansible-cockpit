@@ -46,9 +46,6 @@
     - cockpit
     - cockpit.socket
 
-- name: Flush handlers
-  meta: flush_handlers
-
 - name: Copy machine files
   template:
     src: machine.json.j2
