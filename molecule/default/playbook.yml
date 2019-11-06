@@ -3,6 +3,7 @@
   hosts: all
 
   vars:
+    cockpit_groupname_server: ungrouped
     configure_cockpit: yes
     configure_cockpit_server: yes
 
