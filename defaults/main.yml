@@ -5,13 +5,6 @@ configure_cockpit: yes
 
 cockpit_groupname: all
 
-required_packages_cockpit:
-  - cockpit-bridge
-  - cockpit-docker
-  - cockpit-packagekit
-  - cockpit-storaged
-  - cockpit-system
-
 cockpit_system_color: yellow
 cockpit_system_visible: "true"
 
@@ -20,10 +13,6 @@ cockpit_system_visible: "true"
 configure_cockpit_server: no
 
 cockpit_groupname_server: manager
-
-required_packages_cockpit_server:
-  - cockpit-dashboard
-  - cockpit-ws
 
 cockpit_host: 127.0.0.1
 cockpit_port: 8130
