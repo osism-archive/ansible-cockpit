@@ -1,7 +1,6 @@
 ---
 required_packages_cockpit:
   - cockpit-bridge
-  - cockpit-packagekit
   - cockpit-storaged
   - cockpit-system
 
