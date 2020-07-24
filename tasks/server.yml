@@ -4,7 +4,7 @@
     name: "{{ item }}"
     state: present
   become: true
-  with_items: "{{ required_packages_cockpit_server }}"
+  loop: "{{ required_packages_cockpit_server }}"
 
 - name: Create systemd overlay directory
   file:
@@ -42,7 +42,7 @@
     daemon_reload: yes
     name: "{{ item }}"
   become: true
-  with_items:
+  loop:
     - cockpit
     - cockpit.socket
 
@@ -54,5 +54,5 @@
     group: root
     mode: 0644
   become: true
-  with_items: "{{ groups[cockpit_groupname]|default([]) }}"
+  loop: "{{ groups[cockpit_groupname]|default([]) }}"
   when: item != inventory_hostname
