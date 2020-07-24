@@ -4,10 +4,8 @@
 
   vars:
     repositories:
-      # NOTE: The focal repository for Docker CE is not yet available. Until then,
-      #       we will use the Bionic repository for Focal.
       - name: docker
-        repository: "deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ 'bionic' if ansible_distribution_release == 'focal' else ansible_distribution_release }} stable"
+        repository: "deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable"
       - name: "{{ ansible_distribution_release }}"
         repository: "deb [arch=amd64] http://de.archive.ubuntu.com/ubuntu/ {{ ansible_distribution_release }} main restricted universe multiverse"
       - name: "{{ ansible_distribution_release }}-backports"
