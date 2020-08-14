@@ -1,6 +1,0 @@
----
-ansible_role_name: cockpit
-distributions:
-  - bionic
-  - focal
-travis_decrypt_key: 16e6e45071a6
